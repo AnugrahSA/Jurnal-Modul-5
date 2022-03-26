@@ -19,11 +19,22 @@ namespace modul5_1302204047
             Random random = new Random();
             id = random.Next(0, 99999);
             playCount = 0;
+
+            Contract.Requires(title != null);
+            Contract.Requires(title.Length < 200);
         }
 
-        public void IncreasePlayCount(int PlayCount)
+        public void IncreasePlayCount(int Count)
         {
-            playCount++;
+            try
+            {
+                if (Count >= 25000000) throw new Exception("input kelebihan");
+                playCount++;
+            }   
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         public void PrintVideoDetails()

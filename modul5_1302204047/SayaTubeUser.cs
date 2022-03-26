@@ -16,6 +16,8 @@ namespace modul5_1302204047
 		public SayaTubeUser(string Username)
 		{
 			this.Username = Username;
+			Contract.Requires(Username != null);
+			Contract.Requires(Username.Length < 100);
 
 			
 
@@ -30,6 +32,7 @@ namespace modul5_1302204047
 		public void AddVideo(SayaTubeVideo video)
         {
 			uploadedVideos.Add(video);
+			Contract.Requires(video != null);
         }
 
 		public void PrintAllVideoPlayCount()

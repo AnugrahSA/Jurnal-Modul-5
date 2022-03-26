@@ -29,6 +29,17 @@ namespace modul5_1302204047
             user1.AddVideo(video8);
             user1.AddVideo(video9);
             user1.AddVideo(video10);
+
+            video1.IncreasePlayCount(25000000);
+            video2.IncreasePlayCount(25000000);
+            video3.IncreasePlayCount(25000000);
+            video4.IncreasePlayCount(25000000);
+            video5.IncreasePlayCount(25000000);
+            video6.IncreasePlayCount(25000000);
+            video7.IncreasePlayCount(25000000);
+            video8.IncreasePlayCount(25000000);
+            video9.IncreasePlayCount(25000000);
+            video10.IncreasePlayCount(25000000);
         }
     }
 }
